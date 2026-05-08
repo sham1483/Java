@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+class IO{
+
+public static void main(String A[])
+{
+    Demo dobj = new Demo();
+    Scanner sobj = new Scanner(System.in);
+    System.out.print("your age:");
+    dobj.Age = sobj.nextInt();
+}
+
+}
+class Demo{
+     public int Age;
+     
+        public Demo()
+        {
+            int Age= 0;
+        }
+     
+}
