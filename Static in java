@@ -1,0 +1,52 @@
+class Demo
+{
+    public int i;
+    public int j;
+    public static int k;        //class variable(Static variable)
+
+    static
+    {
+        System.out.println("inside static block");
+        k = 20;
+    }                           //Static block
+
+    public Demo()       //Default constructor
+    {
+        System.out.println("inside constructor");
+        this.i = 10;
+        this.j = 11;
+    }
+
+    public void fun()
+    {
+        System.out.println("inside fun method");
+        System.out.println(this.i);
+        System.out.println(this.j);
+        System.out.println(Demo.k);
+
+    }
+
+    public static void gun()    //ststic method
+    {
+        System.out.println("inside gun");
+        System.out.println(Demo.k);
+    }
+}
+
+
+class StaticDemo
+{
+    public static void main(String A[])
+    {
+        System.out.println("inside main");
+
+        System.out.println("value of k :"+Demo.k);
+        Demo.gun();
+
+        Demo dobj1 = new Demo();
+        Demo dobj2 = new Demo();
+
+        dobj1.fun();
+        dobj2.fun();
+    }
+}
